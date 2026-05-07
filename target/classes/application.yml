@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /mc-pruebas-windsurf
+
+spring:
+  application:
+    name: mc-pruebas-windsurf
+  jackson:
+    default-property-inclusion: non_null
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: alpha
+    tags-sorter: alpha
+
+logging:
+  level:
+    root: INFO
+    com.pruebas.windsurf: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{36} - %msg%n"

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.pruebas.windsurf.common.facade.producto.get.GsGetProductosFacadeTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.814 s -- in com.pruebas.windsurf.common.facade.producto.get.GsGetProductosFacadeTest

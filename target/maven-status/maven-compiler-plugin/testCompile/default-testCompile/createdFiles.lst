@@ -1,0 +1,7 @@
+com\pruebas\windsurf\common\facade\producto\get\GsGetProductosFacadeTest.class
+com\pruebas\windsurf\postusuariopremium\usecase\GsPostUsuarioPremiumUsecaseTest.class
+com\pruebas\windsurf\postusuariopremium\controller\GsPostUsuarioPremiumControllerTest.class
+com\pruebas\windsurf\common\facade\usuario\register\GsRegisterUsuarioPremiumFacadeTest.class
+com\pruebas\windsurf\getlistaproductos\controller\GsGetListaProductosControllerTest.class
+com\pruebas\windsurf\getlistaproductos\usecase\GsGetListaProductosUsecaseTest.class
+com\pruebas\windsurf\PruebasWindsurfApplicationTests.class
