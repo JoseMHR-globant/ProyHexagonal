@@ -1,0 +1,54 @@
+{
+  "mcpServers": {
+    "github": {
+      "name": "github",
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer REMPLAZAME!!!",
+        "X-MCP-Toolsets": "context,repos,pull_requests,actions,git"
+      }
+    },
+    "atlassian-docker": {
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "CONFLUENCE_URL=https://retail-commercial.atlassian.net",
+        "-e",
+        "CONFLUENCE_USERNAME=josema.heredia@servexternos.example.com",
+        "-e",
+        "CONFLUENCE_API_TOKEN=REMPLAZAME!!!",
+        "-e",
+        "JIRA_URL=https://retail-commercial.atlassian.net",
+        "-e",
+        "JIRA_USERNAME=josema.heredia@servexternos.example.com",
+        "-e",
+        "JIRA_API_TOKEN=REMPLAZAME!!!",
+        "-e",
+        "JIRA_SSL_VERIFY=false",
+        "-e",
+        "CONFLUENCE_SSL_VERIFY=false",
+        "-e",
+        "ENABLED_TOOLS=confluence_get_page,confluence_search,confluence_create_page,confluence_update_page,confluence_add_comment,jira_get_issue,jira_get_project_issues,jira_search,jira_create_issue,jira_update_issue,jira_add_comment,jira_transition_issue",
+        "gluoneurope.jfrog.io/ods-docker-public/mcp/atlassian:latest"
+      ],
+      "command": "docker",
+      "disabled": false,
+      "env": {
+        "CONFLUENCE_API_TOKEN": "REMPLAZAME!!!",
+        "CONFLUENCE_SSL_VERIFY": "false",
+        "CONFLUENCE_URL": "https://retail-commercial.atlassian.net",
+        "CONFLUENCE_USERNAME": "josema.heredia@servexternos.example.com",
+        "ENABLED_TOOLS": "confluence_get_page,confluence_search,confluence_create_page,confluence_update_page,confluence_add_comment,jira_get_issue,jira_get_project_issues,jira_search,jira_create_issue,jira_update_issue,jira_add_comment,jira_transition_issue",
+        "JIRA_API_TOKEN": "REMPLAZAME!!!",
+        "JIRA_SSL_VERIFY": "false",
+        "JIRA_URL": "https://retail-commercial.atlassian.net",
+        "JIRA_USERNAME": "josema.heredia@servexternos.example.com"
+      },
+      "name": "atlassian-docker",
+      "type": "stdio"
+    }
+  }
+}
