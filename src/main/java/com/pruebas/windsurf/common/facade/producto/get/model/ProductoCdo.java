@@ -2,6 +2,7 @@ package com.pruebas.windsurf.common.facade.producto.get.model;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -36,4 +37,7 @@ public class ProductoCdo implements Serializable {
 
   /** Categoría del producto. */
   private String categoria;
+
+  /** Fecha de creación o registro del producto. */
+  private LocalDate fecha;
 }

@@ -2,6 +2,7 @@ package com.pruebas.windsurf.common.domain.producto;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -35,4 +36,7 @@ public class Producto implements Serializable {
 
   /** Categoría de agrupación del producto. */
   private String categoria;
+
+  /** Fecha de creación o registro del producto. */
+  private LocalDate fecha;
 }

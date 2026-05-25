@@ -4,6 +4,7 @@ import com.pruebas.windsurf.common.domain.producto.Producto;
 import com.pruebas.windsurf.common.facade.producto.get.mapper.GetProductosFacadeMapper;
 import com.pruebas.windsurf.common.facade.producto.get.model.ProductoCdo;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -38,12 +39,14 @@ public class GsGetProductosFacade implements GetProductosFacade {
                 .nombre("Producto Hola Mundo")
                 .precio(new BigDecimal("19.99"))
                 .categoria("DEMO")
+                .fecha(LocalDate.of(2024, 1, 15))
                 .build(),
             ProductoCdo.builder()
                 .id("PROD-002")
                 .nombre("Producto Experimento")
                 .precio(new BigDecimal("49.50"))
                 .categoria("DEMO")
+                .fecha(LocalDate.of(2024, 3, 22))
                 .build());
     return mapper.toDomainList(cdos);
   }

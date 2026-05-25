@@ -1,5 +1,6 @@
 package com.pruebas.windsurf.getlistaproductos.controller.model.response;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.Serializable;
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -21,10 +22,12 @@ import lombok.Setter;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Schema(description = "Wrapper DTO for the list of products returned by the endpoint")
 public class ProductosListResponseDto implements Serializable {
 
   private static final long serialVersionUID = 1L;
 
   /** Listado de productos devueltos por la API. */
+  @Schema(description = "List of products returned by the API")
   private List<ProductoResponseDto> productos;
 }
