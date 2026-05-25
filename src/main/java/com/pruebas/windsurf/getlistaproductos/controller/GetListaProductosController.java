@@ -8,23 +8,21 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
 /**
- * Controller interface that declares the contract of the {@code GET /v1/productos} endpoint.
+ * Controller interface for retrieving a list of products.
  *
- * <p>Following the corporate library convention, the controller layer is split into a parent
- * interface (this file, holding the OpenAPI contract and routing metadata) and a {@code Gs}
- * implementation class that provides the wiring (use case, mapper) and the actual logic.
- *
- * <p>One endpoint per controller, so this interface defines a single operation.
+ * @author Team Name
+ * @since 1.0.0
  */
 @Tag(name = "Productos", description = "Operaciones sobre el listado de productos de prueba")
 @RequestMapping("/v1/productos")
 public interface GetListaProductosController {
 
   /**
-   * Returns the full list of available products.
+   * Retrieves the complete list of products.
    *
-   * @return HTTP 200 response containing the list of products as DTOs.
+   * @return the response entity containing the list of products
    */
   @Operation(
       summary = "Lista todos los productos",

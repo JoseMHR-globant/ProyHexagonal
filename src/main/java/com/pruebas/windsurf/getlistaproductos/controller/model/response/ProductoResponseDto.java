@@ -1,7 +1,9 @@
 package com.pruebas.windsurf.getlistaproductos.controller.model.response;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -20,19 +22,28 @@ import lombok.Setter;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Schema(description = "Response DTO representing a single product returned by the API")
 public class ProductoResponseDto implements Serializable {
 
   private static final long serialVersionUID = 1L;
 
   /** Identificador único del producto. */
+  @Schema(description = "Unique product identifier", example = "PROD-001")
   private String id;
 
   /** Nombre comercial del producto. */
+  @Schema(description = "Commercial name of the product", example = "Producto Hola Mundo")
   private String nombre;
 
   /** Precio de venta del producto. */
+  @Schema(description = "Sale price of the product", example = "19.99")
   private BigDecimal precio;
 
   /** Categoría de agrupación del producto. */
+  @Schema(description = "Product category", example = "DEMO")
   private String categoria;
+
+  /** Fecha de creación o registro del producto. */
+  @Schema(description = "Creation or registration date of the product", example = "2024-01-15")
+  private LocalDate fecha;
 }
